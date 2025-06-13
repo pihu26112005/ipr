@@ -2,6 +2,10 @@
 
 A full-stack web application to manage users in a social-like system.
 ---
+- https://ipr-6vvo.onrender.com --> backend deployed url 
+- https://ipr-sigma.vercel.app  --> frontend deployed url 
+
+---
 
 ## Tech Stack
 
