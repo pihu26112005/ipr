@@ -13,7 +13,8 @@ export const SharedProvider = ({ children }) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/users");
+        // const res = await axios.get("http://localhost:5000/api/users");
+        const res = await axios.get("https://ipr-6vvo.onrender.com/api/users");
 
         const processed = res.data.map((user) => ({
           ...user,
@@ -33,7 +34,8 @@ export const SharedProvider = ({ children }) => {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/users/${id}`);
+      // await axios.delete(`http://localhost:5000/api/users/${id}`);
+      await axios.delete(`https://ipr-6vvo.onrender.com/api/users/${id}`);
   
       // Update frontend context
       setUsers(prev =>
@@ -62,7 +64,8 @@ export const SharedProvider = ({ children }) => {
         following: formData.following || []
       };
       console.log("Creating user with payload:", payload);
-      const res = await axios.post("http://localhost:5000/api/users", payload);
+      // const res = await axios.post("http://localhost:5000/api/users", payload);
+      const res = await axios.post("https://ipr-6vvo.onrender.com/api/users", payload);
       const newUser = res.data;
       console.log("Created user:", newUser);
   
@@ -90,7 +93,8 @@ const updateUser = async (id, userData) => {
       following: userData.following || []
     };
 
-    await axios.put(`http://localhost:5000/api/users/${id}`, payload);
+    // await axios.put(`http://localhost:5000/api/users/${id}`, payload);
+    await axios.put(`https://ipr-6vvo.onrender.com/api/users/${id}`, payload);
 
     setUsers(prev =>
       prev.map(user =>
