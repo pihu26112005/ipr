@@ -1,6 +1,6 @@
 # Full Stack User Management System
 
-A full-stack web application to manage users in a social-like system with features like 
+A full-stack web application to manage users in a social-like system.
 ---
 
 ## Tech Stack
